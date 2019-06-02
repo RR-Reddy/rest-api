@@ -24,6 +24,11 @@ public class SampleController {
 	@Autowired
 	private GameService gameService;
 
+	@GetMapping("/getName")
+	public String getName() {
+		return "RR";
+	}
+	
 	// join or create room
 	@PostMapping("/create-room")
 	public Long createRoom(@RequestBody Player player) {
